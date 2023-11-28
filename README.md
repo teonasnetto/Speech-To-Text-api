@@ -1,3 +1,1 @@
-docker-compose -f docker-compose-node.yml -f docker-compose-common.yml up -d
-
-docker-compose -f docker-compose-python.yml -f docker-compose-common.yml up -d
+docker network create --subnet=172.18.0.0/16 app_net
