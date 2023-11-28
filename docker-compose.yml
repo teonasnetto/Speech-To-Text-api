@@ -1,0 +1,16 @@
+version: "3"
+services:
+  python_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      app_net:
+        ipv4_address: 172.18.0.2
+
+    container_name: python_app_container
+    restart: always
+
+networks:
+  app_net:
+    external: true
